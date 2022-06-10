@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forecast Temperatures Plot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Add Jumbotron to Header -->
+        <div class="jumbotron text-center">
+            <h1>An Awesome Weather Dashboard</h1>
+        </div>
+
+        <div class="card border-primary mb-3" style="max-width: 50rem;">
+            <div class="card-header">Filters</div>
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div id="filters1">
+                            <div class="form-group">
+                                <label for="cityInput">City</label>
+                                <input type="text" class="form-control" id="cityInput" placeholder="Enter a city">
+                            </div>
+                            <div class="form-group">
+                                <label for="cityInput2">City 2</label>
+                                <input type="text" class="form-control" id="cityInput2" placeholder="Enter a city">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="filters2">
+                            <div class="form-group">
+                                <label for="unitInput">Units</label>
+                                <select id="unitInput">
+                                  <option value="imperial">Imperial</option>
+                                  <option value="metric">Metric</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="submit" type="submit" class="btn btn-primary">Plot 5-day Forecast</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add section for plot -->
+        <div class="row">
+            <div class="col-md-12">
+                <div id="plot"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="plots.js"></script>
+</body>
+
+</html>
